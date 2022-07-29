@@ -30,18 +30,18 @@ h6 {
 }
 
 a {
-    color: #333;
+    color: #515151;
     -webkit-transition: color 400ms, background-color 400ms;
     -moz-transition: color 400ms, background-color 400ms;
     -o-transition:  color 400ms, background-color 400ms;
     transition:  color 400ms, background-color 400ms;
 }
     a:hover{
-        color: #FE6F5E;
+        color: #000;
         text-decoration: none;
     }
     a:focus {
-        /* color: #FE3119; */
+        color: #000;
         text-decoration: none;
     }
 }
@@ -54,10 +54,8 @@ hr {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 800;
     font-size: 0.875em;
-    color: #fff;
+    color: #515151;
     border-width: 0;
-    border: 1px solid #FE3119;
-    border-radius: 3px;
     background-color: transparent;
 }
 .btn-xs {
@@ -68,7 +66,6 @@ hr {
     text-transform: uppercase;
     padding: 3px 8px;
     border-width: 0;
-    border: 1px solid #FE6F5E;
     border-radius: 1px;
     background-color: transparent;
 }
@@ -86,14 +83,13 @@ hr {
 .btn:hover,
 .btn:focus,
 .btn:active {
-    background: #FE3119;
-    border: 1px solid #FE3119;
-    color: #fff;
+    background: #fff;
+    color: #000;
 }
 .btn-primary:hover,
 .btn-primary:focus {
     background: transparent;
-    color: #fff;
+    color: #000;
 }
 
 /* -- HEADER -- */
@@ -102,6 +98,9 @@ hr {
 
 /* Nuevo */
 
+    .header {
+        background-color:#fff;
+    }
     .navbar {
         color: #333;
     }
@@ -109,9 +108,30 @@ hr {
         width: auto;
         font-weight: lighter;
         text-transform: uppercase;
-        font-size: .9em;
-        color: #256d7b;
+        font-size: 1em;
+        font-weight: 500;
+        color: #515151;
+        background-color: #fff;
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0);
     }
+    .navbar .navbar-brand:hover {
+        color:#000;
+    }
+    .sidebar {
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0);
+    }
+    .sidebar-heading {
+        text-transform: none;
+        line-height: 1.5;
+    }
+    .sidebar .nav-link {
+        color: #515151;
+    }
+    .nav-link:hover, .nav-link:focus {
+        color: #000;
+    }
+
+
     .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
         color: #256d7b;
     }
@@ -129,8 +149,8 @@ hr {
         padding: .5rem 1.05rem .5rem 1.13rem;
         color: #256d7b;
     }
-    .nav-link:hover, .nav-link:focus {
-        color: #FE6F5E;
+    /* .nav-link:hover, .nav-link:focus {
+        color: #FE6F5E; */
     }
     .bg-light {
         background-color: #fafbfd !important;
@@ -301,6 +321,39 @@ hr {
 
 @media (min-width: 1400px) {
 
+    .modal-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: .9em;
+        font-weight: 200;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.3rem;
+        outline: 0;
+    }
+    .modal-dialog {
+        max-width: 600px;
+    }
+    .modal-dialog img {
+        max-height: auto;
+        margin-bottom: 20px;
+    }
+    .modal-content button {
+        float: right;
+    }
+    .carousel-text {
+        margin-left: 20px;
+    }
+    .close {
+        width: 30px;
+        height: 30px;
+        margin-left: 568px;
+    }
+
     /* -- PORTAFOLIO -- */
 
     #portfolio {
@@ -310,6 +363,7 @@ hr {
         color: #333;
     }
     .project {
+        font-size: .9em;
         max-height: 80vh;
     }
     .project .obra {
@@ -322,12 +376,19 @@ hr {
         max-width: 700px;
         margin-bottom: 20px;
     }
+    .project .obra a {
+        text-decoration: none;
+    }
+    .project .obra p {
+
+    }
+
 
     /* -- gallery --*/
 
-    .close {
+    /* .close {
       font-size: 1.5rem;
-    }
+    } */
 
     .col-12 img {
       opacity: 1;
